@@ -31,7 +31,8 @@ body{font-family: "Roboto", sans-serif; color: #434455;
 
             .cap-section{background-color: #FFF;
             border-bottom: 1px solid #e7e9fc;
-            }
+box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+        }
 
             .container{width: 1158px;
             margin: 0;
@@ -62,6 +63,8 @@ body{font-family: "Roboto", sans-serif; color: #434455;
         line-height: 1.5;
         padding: 24px 0;
         transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .menu-one:hover, .menu-two:hover, .menu-three:hover{color: #404BBF;
@@ -79,7 +82,7 @@ body{font-family: "Roboto", sans-serif; color: #434455;
                 .menu-one::after {
                     position: absolute;
                     display: block;
-                   bottom: 0;
+                   bottom: -1px;
                  margin: 0;
                         content: "";
                         width: 48px;
@@ -95,6 +98,8 @@ body{font-family: "Roboto", sans-serif; color: #434455;
                     letter-spacing: 0.02em;
                     line-height: 1.5;
                 transition-property: color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                     .mail:hover{color: #404bbf;}
@@ -111,7 +116,12 @@ body{font-family: "Roboto", sans-serif; color: #434455;
 
    .hero-image{background-color: #2E2F42;
     padding: 188px 0;
+    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
    
@@ -136,6 +146,8 @@ body{font-family: "Roboto", sans-serif; color: #434455;
     margin-left: auto;
     margin-right: auto;
     transition-property: background-color;
+    transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .btn:focus{background-color: #404BBF;}
@@ -418,12 +430,17 @@ overflow: hidden;
 border: 1px solid var(--LIGHT-SLATE, #8E8F99);
 background: var(--CLOUD, #F4F4FD);
 margin-bottom: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 112px;
 }
 
 .social-links{
 display: flex;
 gap: 24px;
 margin-left: 16px;
+justify-content: center;
 }
 
 .link{
@@ -434,6 +451,10 @@ margin-left: 16px;
   height: 40px;
   border-radius: 50%;
   background-color: #4D5AE5;
+}
+
+.link:hover, .link:focus{
+    background-color: #404bbf;
 }
 
 .container-end{
@@ -457,6 +478,12 @@ letter-spacing: 0.32px;
 margin-bottom: 16px;
 }
 
+.icon{
+    fill: #f4f4fd;
+    transition-property: background-color;
+    transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 
