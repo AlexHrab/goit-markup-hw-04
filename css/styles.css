@@ -117,7 +117,7 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
    .hero-image{background-color: #2E2F42;
     padding: 188px 0;
     max-width: 1440px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office\ 1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -264,7 +264,9 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
                     font-style: normal;
                     font-weight: 400;
                     letter-spacing: 0.32px;
-                line-height: 1.5;}
+                line-height: 1.5;
+            
+            }
 
                     .end{background-color: #2E2F42;
                     padding: 100px 0;;
@@ -402,23 +404,33 @@ row-gap: 48px;
 
 .project-card-one{width: calc((100% - 48px) / 3); 
 background: var(--WHITE, #FFF);
-position: relative;
-overflow: hidden;
+
+
 }
 
 .row-one-text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  background-color: transparent;
-
-  transform: translatey(100%);
-  transition: transform 2000ms ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.project-card-one:hover .row-one-text {
+.one-text{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em; 
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.project-card-one:hover .one-text{
     transform: translatey(0);
   }
 
@@ -451,15 +463,22 @@ justify-content: center;
   height: 40px;
   border-radius: 50%;
   background-color: #4D5AE5;
+  transition-property: background-color;
+    transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover, .link:focus{
     background-color: #404bbf;
 }
 
-.container-end{
+.container end{
     display: flex;
-    gap: 120px;
+   
+}
+
+.container-end-logo{
+    margin-right: 120px;
 }
  
 .social-links-end{
@@ -480,9 +499,17 @@ margin-bottom: 16px;
 
 .icon{
     fill: #f4f4fd;
-    transition-property: background-color;
-    transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.project-card-one:hover{
+    border: 1px solid #F4F4FD;
+background: #FFF;
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.project-card-one{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 
